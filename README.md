@@ -1,39 +1,61 @@
-# Market Intelligence Agent — Amazon QuickSuite (Udacity nd2726 Project 2)
+# Market Intelligence Agent — Amazon QuickSuite
 
-A no-code Market Intelligence workflow built entirely in **Amazon QuickSuite**: a Kaggle dataset as internal knowledge, an agent with an enforced evidence-citation persona, a Quick Research external briefing, and a validated, leadership-ready Market Intelligence Brief — organized in one Space.
+A no-code market-intelligence workflow on Amazon QuickSuite: a Kaggle dataset as agent knowledge, a citation-enforced chat agent, a Quick Research deep-research brief of the live market, and a **validated** leadership brief — every insight tagged `[Dataset]` or `[Quick Research]` and re-checked against the raw CSV before acceptance.
 
-## The one-paragraph version
+*Udacity nd2726 Project 2 · Amazon QuickSuite (Spaces · Chat agents · Quick Research) · September 2026 · Wisdom Azaglo*
 
-I picked the Kaggle *Video Game Sales* dataset (16,598 best-selling titles, 1995–2016) because it captures an era whose end is still misunderstood: retail unit sales collapsed ~90% after 2008 while the actual market grew to $182.7B. My agent was instructed to never blend evidence types: every claim is tagged `[Dataset]` (internal, through-2016) or `[Quick Research]` (external, 2024–2026). I then ran a Quick Research deep-research job on the current market, fed its findings back to the agent for an integrated Market Analysis, and asked for a final brief. Before accepting anything I recomputed the key numbers from the raw CSV and wrote a reliability evaluation that downgrades two insights to Medium confidence and flags the EA-buyout figure as the weakest claim.
+## The question and the answer
 
-## What was built (all named `WA - ...`)
+**Question (for a mid-size game publisher's FY2027 plan):** keep optimizing premium console/PC unit sales, or pivot investment to recurring monetization, mobile/PC platforms, and Asia-Pacific?
+
+**Answer:** the market never shrank — the accounting model changed. Historical tracked unit sales fell ~90% from the 2008 peak while the market grew to **$182.7B (2024) → ~$227B (2028E)**; growth is mobile (~55%/$108B) + PC (+10.4% YoY); consolidation (Microsoft–Activision $68.7B, Take-Two–Zynga $12.7B) is squeezing the mid tier; geographic gravity is APAC. Overall confidence: **Medium-High** — directions corroborated by two independent evidence bases, magnitudes dependent on external aggregates.
+
+| # | Insight | Sources | Confidence |
+|---|---|---|---|
+| 1 | Market transformed, not shrunk: 678.9M units (2008) → $182.7B/yr revenue | Dataset + Research | High |
+| 2 | Consolidation squeezes mid-tier (top-5 held 52.7% even pre-mergers; THQ precedent) | Dataset + Research | High · Medium (EA figure) |
+| 3 | Mobile + PC are the growth vectors; dataset era was 72.6% console | Dataset + Research | High/Medium |
+| 4 | Gravity shifted to APAC (NA 51.4%→47.6% in-data; APAC-largest today) | Dataset + Research | Medium |
+| 5 | GenAI could halve $200–400M AAA budgets — culturally contested | Research only | Low-Medium |
+
+## Start here
+
+1. [`Research_Brief_WA_Market_Intelligence.docx`](Research_Brief_WA_Market_Intelligence.docx) — the graded deliverable (objective, scope, approach, 5 insights, visual evidence, confidence, limitations, strategy, 7-sentence exec summary)
+2. [`artifacts/04_reliability_evaluation.md`](artifacts/04_reliability_evaluation.md) — my Step-6 validation: per-insight confidence, freshness notes, "what would change our mind", impact/effort matrix
+3. [`docs/limitations_and_checks.md`](docs/limitations_and_checks.md) — every dataset claim recomputed from the raw CSV, and the four conclusions I explicitly refused to draw
+4. [`docs/methodology.md`](docs/methodology.md) — why the agent has six operating rules and why research ran as a separate job
+
+## The build
 
 | Asset | Name / ID |
 |---|---|
-| Space | `WA - Market Intelligence – Video Game Publishing` (`25cc817f`) |
-| Knowledge | `vgsales.csv` (Kaggle `gregorut/videogamesales`) + 4 analysis artifacts |
-| Chat agent | `WA - Market Intelligence Agent – VG Publishing` (`c46b71b2`) |
-| Quick Research report | `Global Video Game Publishing Market Intelligence 2024–2026` (`e7c70710`) |
-| Conversations | dataset analysis → integrated analysis → final brief |
+| Space | `WA - Market Intelligence – Video Game Publishing` — dataset + 4 analysis artifacts, all Ready (`25cc817f`) |
+| Knowledge | Kaggle [`gregorut/videogamesales`](https://www.kaggle.com/datasets/gregorut/videogamesales) — 16,598 titles, 1995–2016 (`data/vgsales.csv`) |
+| Chat agent | `WA - Market Intelligence Agent – VG Publishing` — purpose + rules: source-tag every claim, confidence per insight, fixed section skeletons, flag timeliness gaps (`c46b71b2`) |
+| Quick Research | `Global Video Game Publishing Market Intelligence 2024–2026` — plan-approval flow, ~9 min run (`e7c70710`); full text in [`artifacts/05_quick_research_report.txt`](artifacts/05_quick_research_report.txt) |
+| Conversations | ① dataset analysis → ② integrated analysis (external findings injected as a labelled block, agreement/divergence demanded) → ③ leadership brief |
 
-## Repo map
+Workflow: dataset first (verifiable quantitative baseline) → external deep research scoped to four decision-critical unknowns → agent integration → my manual re-validation → brief. Full reasoning: [`docs/methodology.md`](docs/methodology.md).
 
-- `Research_Brief_WA_Market_Intelligence.docx` — the graded deliverable (template sections 1–9, chart embedded)
-- `docs/methodology.md` — why each step was designed the way it was
-- `docs/limitations_and_checks.md` — what I re-verified myself and what I refused to conclude
-- `artifacts/` — agent outputs (dataset analysis, integrated analysis, brief), the reliability evaluation, the raw Quick Research report text, and `decision_chart.png`
-- `screenshots/` — 20 evidence shots following the build order (portal → space → agent → research → analysis → brief → final space)
+## Evidence
 
-## Headline findings (with source labels, as the agent enforced)
+21 screenshots in [`screenshots/`](screenshots) follow build order: portal (`600–602`) → Space + upload (`620–624`) → agent creation & knowledge link (`642–662`) → Quick Research (`664–673`) → agent analyses and brief (`674–678`) → organized Space (`679–680`). Each rubric criterion maps to a specific file in [`docs/rubric_map.md`](docs/rubric_map.md).
 
-1. The market transformed, it did not shrink — 678.9M units (2008) → $182.7B (2024), ~4.9% CAGR to $227B. **[Dataset + Quick Research]** High confidence.
-2. Consolidation (MSFT–Activision $68.7B, T2–Zynga $12.7B, reported EA deal) + top-5 historical share 52.7% → mid-tier squeeze. High / Medium on the EA figure.
-3. Mobile ≈ 55% of revenue ($108B), PC +10.4% YoY vs a dataset that was 72.6% console. High/Medium.
-4. APAC gravity shift (NA 51.4%→47.6% in-data, APAC-largest today). Medium.
-5. GenAI could halve $200–400M AAA budgets — single-source. Low-Medium.
+![Decision chart — top publishers and the 2008 peak vs today's revenue](artifacts/decision_chart.png)
 
-## Built with
+## Verify it yourself
 
-Amazon QuickSuite (Spaces, Chat agents, Quick Research), Kaggle public dataset, matplotlib (one summary chart for the brief), python-docx (brief rendering).
+```bash
+python - <<'EOF'
+import csv
+from collections import defaultdict
+rows=list(csv.DictReader(open('data/vgsales.csv')))
+pub=defaultdict(float)
+for r in rows: pub[r['Publisher']]+=float(r['Global_Sales'])
+print(sorted(pub.items(), key=lambda x:-x[1])[:3])   # Nintendo 1786.56M, EA 1110M...
+EOF
+```
 
-Student: Wisdom Azaglo — September 2026.
+## Known weaknesses
+
+Agent drafted all three analytic artifacts (mitigated: I recomputed the numbers, and the reliability doc is human-written); the research report entered the conversation via prompt rather than linked knowledge; the 10-year temporal gap between dataset and today is the project's largest structural weakness. [`docs/limitations_and_checks.md`](docs/limitations_and_checks.md).
