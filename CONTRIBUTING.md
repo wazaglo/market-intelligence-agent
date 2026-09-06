@@ -1,16 +1,16 @@
 # Contributing
 
-This is a **course capstone portfolio repo** documenting a no-code market-intelligence build on Amazon QuickSuite against a fixed brief (the Udacity rubric). The Space, agent, and research report live in a Vocareum lab account that is torn down after the course — the repo and its screenshots are the deliverable.
+This is a **course capstone portfolio repo** documenting a no-code market-intelligence build on Amazon QuickSuite against a fixed brief (the Udacity rubric). The Space, agent, and research report live in a Vocareum lab account that is torn down after the course - the repo and its screenshots are the deliverable.
 
 ## Contribution types
 
 | Kind of feedback | How |
 |---|---|
 | Factual error in an insight, figure, or confidence call | Open an issue citing the file/section; I re-verify against `data/vgsales.csv` and the Quick Research report, and credit you in the doc |
-| Better way to structure the dataset↔research integration or the validation design | Issue against `docs/methodology.md` / `docs/limitations_and_checks.md` — design critique especially welcome |
+| Better way to structure the dataset↔research integration or the validation design | Issue against `docs/methodology.md` / `docs/limitations_and_checks.md` - design critique especially welcome |
 | Reproduction problems with the verify snippet | Issue with your OS/Python version (needs stdlib only) |
 
-Please **don't** open PRs that rewrite the analysis voice of the docs — they are deliberately first-person learning artifacts.
+Please **don't** open PRs that rewrite the analysis voice of the docs - they are deliberately first-person learning artifacts.
 
 ## Reproducing the checks
 
@@ -30,13 +30,13 @@ EOF
 ```
 
 External figures (market size, platform mix, M&A values) come from the Quick
-Research report kept at `artifacts/05_quick_research_report.txt` — treat them as
+Research report kept at `artifacts/05_quick_research_report.txt` - treat them as
 secondary sources, exactly as the reliability doc does.
 
 ## Style notes
 
 - Every quantitative claim states its source: `[Dataset]`, `[Quick Research]`, or "recomputed".
-- Confidence levels are part of the claims — a contribution that raises or lowers one should carry evidence.
+- Confidence levels are part of the claims - a contribution that raises or lowers one should carry evidence.
 - Screenshots in `screenshots/` are append-only evidence; never edit or relabel them.
 
 ## License

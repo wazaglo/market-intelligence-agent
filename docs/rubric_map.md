@@ -1,4 +1,4 @@
-# Rubric map — where each requirement is satisfied
+# Rubric map - where each requirement is satisfied
 
 | Rubric criterion | Requirement | Where |
 |---|---|---|
@@ -11,7 +11,7 @@
 | | Evidence specific/verifiable | [Dataset]/[Quick Research] tags + figures recomputed in `docs/limitations_and_checks.md` |
 | Analysis 2 | Visual Evidence section (chart type + content + linkage) | §5 + `artifacts/decision_chart.png` (also embedded in docx) |
 | Reliability 1 | Per-insight confidence: source quality, consistency, timeliness, level | §6 + `artifacts/04_reliability_evaluation.md` (per-insight table incl. freshness notes) |
-| | ≥2 Limitations and Risks | §7 (missing data, conflicting signals, bias — each concrete) |
+| | ≥2 Limitations and Risks | §7 (missing data, conflicting signals, bias - each concrete) |
 | Communication 1 | Strategic Implications + ≥2 "should not be concluded" | §8 (4 decisions, 4 non-conclusions) |
 | | Summary for Leadership 5–7 sentences incl. confidence + takeaways | §9 (7 sentences) |
 | Stand-out items | Decision dashboard | `artifacts/decision_chart.png` |

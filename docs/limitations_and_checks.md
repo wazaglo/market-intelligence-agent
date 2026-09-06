@@ -8,7 +8,7 @@
 | 2008 peak 678.90M; 2015 264.44M | 678.90M; 264.44M | exact match |
 | 2008→2016 −89.6% | −89.6% (dated rows) | match, with caveat below |
 | Regional mix NA 49.2/EU 27.3/JP 14.5/Oth 8.9 | 49.1/27.3/14.6/8.9 | match to rounding |
-| Top-5 share 52.7% | 52.5% (all rows) / 53.1% (dated only) | near — denominator/label noise |
+| Top-5 share 52.7% | 52.5% (all rows) / 53.1% (dated only) | near - denominator/label noise |
 
 Caveat kept in the brief: the 2016 row is a reporting artifact (partial year capture), so the −89.6% headline includes it and overstates true decline; stated in the limitations section rather than fixed by cherry-picking 2015.
 
@@ -21,10 +21,10 @@ Caveat kept in the brief: the 2016 row is a reporting artifact (partial year cap
 
 ## Things I explicitly did NOT conclude
 
-1. No "the industry shrank 90%" — the dataset measures a shrinking slice (retail-tracked ≥100k-unit titles), not the market.
-2. No causal claim from the correlation "Gen 7 share collapse ↔ Gen 8 only 9.1% in data" — that is incomplete capture of a transitional year range.
-3. No "subscriptions are failing" — one pricing episode (Game Pass price-hike churn) plus one product failure (Concord) ≠ model verdict.
-4. No country-level APAC sizing from the dataset — "Other" lumps China/SE Asia/LATAM; the APAC claim stands only on external evidence.
+1. No "the industry shrank 90%" - the dataset measures a shrinking slice (retail-tracked ≥100k-unit titles), not the market.
+2. No causal claim from the correlation "Gen 7 share collapse ↔ Gen 8 only 9.1% in data" - that is incomplete capture of a transitional year range.
+3. No "subscriptions are failing" - one pricing episode (Game Pass price-hike churn) plus one product failure (Concord) ≠ model verdict.
+4. No country-level APAC sizing from the dataset - "Other" lumps China/SE Asia/LATAM; the APAC claim stands only on external evidence.
 
 ## Known weaknesses a reviewer should weigh
 
