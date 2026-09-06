@@ -59,3 +59,7 @@ EOF
 ## Known weaknesses
 
 Agent drafted all three analytic artifacts (mitigated: I recomputed the numbers, and the reliability doc is human-written); the research report entered the conversation via prompt rather than linked knowledge; the 10-year temporal gap between dataset and today is the project's largest structural weakness. [`docs/limitations_and_checks.md`](docs/limitations_and_checks.md).
+
+## Contributing & license
+
+Found a factual error or a better integration/validation approach? Open an issue — see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the reproduction commands. Content licensed CC BY-NC-ND 4.0 ([`LICENSE`](LICENSE)).
