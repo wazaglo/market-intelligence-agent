@@ -24,6 +24,7 @@ A no-code market-intelligence workflow on Amazon QuickSuite: a Kaggle dataset as
 2. [`artifacts/04_reliability_evaluation.md`](artifacts/04_reliability_evaluation.md) — my Step-6 validation: per-insight confidence, freshness notes, "what would change our mind", impact/effort matrix
 3. [`docs/limitations_and_checks.md`](docs/limitations_and_checks.md) — every dataset claim recomputed from the raw CSV, and the four conclusions I explicitly refused to draw
 4. [`docs/methodology.md`](docs/methodology.md) — why the agent has six operating rules and why research ran as a separate job
+5. [`WALKTHROUGH.md`](WALKTHROUGH.md) — step-by-step reproduction: every input and its source, verbatim agent instructions/prompts, gotchas
 
 ## The build
 
