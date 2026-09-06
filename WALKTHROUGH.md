@@ -1,4 +1,4 @@
-# Walkthrough — exactly what we did, with every input and where it came from
+# Walkthrough - exactly what we did, with every input and where it came from
 
 Reproduce this in roughly one long session (the Quick Research job alone takes ~9 minutes). Section order is the real work order.
 
@@ -6,9 +6,9 @@ Reproduce this in roughly one long session (the Quick Research job alone takes ~
 
 | Input | What it is | Where it came from |
 |---|---|---|
-| `data/vgsales.csv` | Kaggle dataset **`gregorut/videogamesales`** ("Video Game Sales", 16,598 titles, 1995–2016, ~8,920M units total; cols: Rank, Name, Platform, Year, Genre, Publisher, NA/EU/JP/Other_Sales, Global_Sales) | kaggle.com — public dataset. Downloaded as `videogamesales.zip` (kept file as Kaggle provides it; single CSV inside). Either via the site (needs sign-in) or `kaggle datasets download gregorut/videogamesales` with an API token (`~/.kaggle/access_token`). Included in this repo at `data/`. |
+| `data/vgsales.csv` | Kaggle dataset **`gregorut/videogamesales`** ("Video Game Sales", 16,598 titles, 1995–2016, ~8,920M units total; cols: Rank, Name, Platform, Year, Genre, Publisher, NA/EU/JP/Other_Sales, Global_Sales) | kaggle.com - public dataset. Downloaded as `videogamesales.zip` (kept file as Kaggle provides it; single CSV inside). Either via the site (needs sign-in) or `kaggle datasets download gregorut/videogamesales` with an API token (`~/.kaggle/access_token`). Included in this repo at `data/`. |
 | `research-brief-template.docx` | The graded deliverable template (9 sections) | project lesson's **Downloads** tab on learn.udacity.com |
-| Lab environment | Amazon Quick Suite (QuickSight) enterprise trial: Spaces, Chat agents, Quick Research, us-west-2, namespace `UdacityQuicksightLab` | project lesson → **Cloud Resources** tab → *Start Cloud Resource* → *Open Cloud Console* → AWS access portal (`d-…awsapps.com/start`) → tile **UdacityQuicksightLab**. Sessions expire fast — have the SAML link ready. |
+| Lab environment | Amazon Quick Suite (QuickSight) enterprise trial: Spaces, Chat agents, Quick Research, us-west-2, namespace `UdacityQuicksightLab` | project lesson → **Cloud Resources** tab → *Start Cloud Resource* → *Open Cloud Console* → AWS access portal (`d-…awsapps.com/start`) → tile **UdacityQuicksightLab**. Sessions expire fast - have the SAML link ready. |
 
 No code was needed to build the project; python was used afterwards only for verification and to render the chart/brief (`matplotlib`, `python-docx`, both pip-installable).
 
@@ -19,7 +19,7 @@ No code was needed to build the project; python was used afterwards only for ver
 
 ## 2. The chat agent (screenshots `642–662`)
 
-1. **Chat agents → Create chat agent → Blank** (skip the AI-generated wizard — manual config gives reproducible results; a first attempt using Generate produced an unsaved draft).
+1. **Chat agents → Create chat agent → Blank** (skip the AI-generated wizard - manual config gives reproducible results; a first attempt using Generate produced an unsaved draft).
 2. Name: `WA - Market Intelligence Agent – VG Publishing` (≤50 chars enforced).
 3. Description: *"An evidence-driven market analyst agent for the video game publishing market. Synthesizes the Kaggle Video Game Sales dataset with Quick Research external signals to produce market analyses and leadership-ready briefs with explicit citations, confidence levels, and limitations."*
 4. Instructions (verbatim, the core of the design):
@@ -38,7 +38,7 @@ No code was needed to build the project; python was used afterwards only for ver
 >
 > Tone: concise, structured, evidence-driven, executive-ready.
 
-5. **Knowledge sources → Link spaces** → tick the WA space checkbox → **Link**. Gotcha: the space grid sometimes loads empty — close and reopen the dialog until the row appears, tick the **row checkbox** (clicking the row text does nothing).
+5. **Knowledge sources → Link spaces** → tick the WA space checkbox → **Link**. Gotcha: the space grid sometimes loads empty - close and reopen the dialog until the row appears, tick the **row checkbox** (clicking the row text does nothing).
 6. Save/Launch. Verify: the agent appears in the home chat-agent picker (`662_picker`).
 
 ## 3. Quick Research (screenshots `664–673`)
@@ -54,9 +54,9 @@ No code was needed to build the project; python was used afterwards only for ver
 
 Same conversation, three prompts (full verbatim text of each is visible in the screenshots):
 
-- **Task 1 — internal analysis**: state dataset context (source, shape, columns), goal, then ask for a `[Dataset]`-labelled Market Analysis with (a) publisher landscape incl. shares of ~8.8B total, (b) trends incl. 2008 peak/decline/platforms/regional mix, (c) opportunities/risks, (d) specific figures. Agent retrieved the CSV from the Space ("Searching your documents") and produced tabular evidence.
-- **Task 2 — integration**: paste the eight external findings as an explicit `[Quick Research]` bullet block and demand the 4-section Market Analysis *with agreement/divergence called out explicitly* between dataset and research.
-- **Task 3 — brief**: ~500-word leadership brief with objective/scope, 3–5 insights + why, confidence & limitations, strategic implications/next steps.
+- **Task 1 - internal analysis**: state dataset context (source, shape, columns), goal, then ask for a `[Dataset]`-labelled Market Analysis with (a) publisher landscape incl. shares of ~8.8B total, (b) trends incl. 2008 peak/decline/platforms/regional mix, (c) opportunities/risks, (d) specific figures. Agent retrieved the CSV from the Space ("Searching your documents") and produced tabular evidence.
+- **Task 2 - integration**: paste the eight external findings as an explicit `[Quick Research]` bullet block and demand the 4-section Market Analysis *with agreement/divergence called out explicitly* between dataset and research.
+- **Task 3 - brief**: ~500-word leadership brief with objective/scope, 3–5 insights + why, confidence & limitations, strategic implications/next steps.
 
 Outputs saved as `artifacts/01–03`.
 
@@ -76,8 +76,8 @@ Outputs saved as `artifacts/01–03`.
 
 ## Failure log (so you don't repeat them)
 
-- Agent drafts made via the AI wizard + page navigation can be **silently unsaved** — the agent vanished from the list. Blank editor + manual fields + Launch persisted it.
+- Agent drafts made via the AI wizard + page navigation can be **silently unsaved** - the agent vanished from the list. Blank editor + manual fields + Launch persisted it.
 - Agent name hard-limits at 50 characters (en dash included).
 - Link-spaces dialog: the space grid intermittently renders empty; tick the checkbox column, not the row text.
 - Kaggle sign-in: Google SSO was blocked (changed password + reCAPTCHA on sign-up); the API token route worked in one command.
-- Quick Research only starts after you click **Start the research** on its plan message — nothing happens if you just hit Send.
+- Quick Research only starts after you click **Start the research** on its plan message - nothing happens if you just hit Send.
